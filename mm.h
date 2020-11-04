@@ -1,3 +1,7 @@
+#ifndef __MM__
+#define __MM__
+
+#define MM_MAX_STRUCT_NAME 32
 typedef struct vm_page_family_{
    
     char struct_name[MM_MAX_STRUCT_NAME];
@@ -8,7 +12,7 @@ typedef struct vm_page_for_families_{
 
     struct vm_page_for_families_ *next;
     vm_page_family_t vm_page_family[0];
-} typedef struct vm_page_for_families_t;
+} vm_page_for_families_t;
 
 #define MAX_FAMILIES_PER_VM_PAGE   \
       (SYSTEM_PAGE_SIZE - sizeof(vm_page_for_families_t *) /\
