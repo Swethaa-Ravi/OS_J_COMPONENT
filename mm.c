@@ -9,6 +9,7 @@
 static vm_page_for_families_t * first_vm_page_for_families = NULL;
 static size_t SYSTEM_PAGE_SIZE=0;
 
+/* Initialising our Virual Memory Manager*/
 void mm_init(){
      SYSTEM_PAGE_SIZE = getpagesize();
 }
